@@ -51,7 +51,7 @@ header h1 {
     padding: 10px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -78,7 +78,7 @@ header h1 {
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin: 25px 0;
+    margin: 15px 0;
     flex-wrap: wrap;
 }
 
