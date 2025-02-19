@@ -1,27 +1,16 @@
-// script.js
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    // Check local storage for theme preference
-    if (localStorage.getItem("theme") === "light") {
-        body.classList.remove("dark-theme");
-        body.classList.add("light-theme");
-    } else {
-        body.classList.remove("light-theme");
-        body.classList.add("dark-theme");
-    }
-    
-    themeToggle.addEventListener("click", function () {
-        if (body.classList.contains("dark-theme")) {
-            body.classList.remove("dark-theme");
-            body.classList.add("light-theme");
-            localStorage.setItem("theme", "light");
-        } else {
-            body.classList.remove("light-theme");
-            body.classList.add("dark-theme");
-            localStorage.setItem("theme", "dark");
-        }
-    });
-    
-    });
-    
+// Tab Navigation
+function openTab(tabName) {
+    let tabs = document.querySelectorAll('.tab-content');
+    let buttons = document.querySelectorAll('.tab-button');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabName).classList.add('active');
+    document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
+}
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}

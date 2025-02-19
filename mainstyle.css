@@ -1,42 +1,152 @@
-/* styles.css */
-
-:root {
-    --bg-color-light: #ffffff;
-    --text-color-light: #000000;
-    --bg-color-dark: #121212;
-    --text-color-dark: #ffffff;
-}
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
     text-align: center;
-    transition: background 0.3s, color 0.3s;
 }
 
-body.light-theme {
-    background: var(--bg-color-light);
-    color: var(--text-color-light);
-}
-
-body.dark-theme {
-    background: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
-
-header {
+/* Main Container */
+.container {
     padding: 20px;
-    font-size: 24px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-#theme-toggle {
-    background: #ff3c00;
-    color: white;
+/* Header */
+header {
+    background: #1e1e1e;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Tabs Container */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tab-button {
+    background: #ff9800;
+    color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
+.tab-button:hover,
+.tab-button.active {
+    background: #ffffff;
+    color: black;
+}
+
+/* Content Sections (Initially Hidden) */
+.tab-content {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Show Active Tab */
+.tab-content.active {
+    display: block;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Product Cards */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.product-card a {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background: #ff9800;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #1e1e1e;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Social Media Links */
+.social-icons a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

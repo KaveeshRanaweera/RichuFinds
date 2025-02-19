@@ -3,20 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RichuFinds - Trending Products</title>
+    <title>RichuFinds - Best Online Deals</title>
     <link rel="stylesheet" href="mainstyle.css">
 </head>
-<body class="dark-theme">
+<body>
+
+    <!-- Header -->
     <header>
         <h1>RichuFinds</h1>
-        <p>Trending Products from AliExpress</p>
-        <button id="theme-toggle">Toggle Theme</button>
+        <p>Find the best products from AliExpress, Daraz, and TikTok</p>
     </header>
-    
-    <section id="product-list">
-        <!-- Products will be loaded here dynamically -->
-    </section>
-    
+
+    <!-- Navigation Tabs -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab('daraz')">Daraz Finds</button>
+        <button class="tab-button" onclick="openTab('aliexpress')">AliExpress Finds</button>
+        <button class="tab-button" onclick="openTab('tiktok')">TikTok Finds</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Daraz Finds Section -->
+        <section id="daraz" class="tab-content active">
+            <h2>Daraz Finds</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="Daraz Product">
+                    <h3>Smart Watch</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="Daraz Product">
+                    <h3>Wireless Earbuds</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AliExpress Finds Section -->
+        <section id="aliexpress" class="tab-content">
+            <h2>AliExpress Finds</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="AliExpress Product">
+                    <h3>Gaming Mouse</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="AliExpress Product">
+                    <h3>LED Light Strip</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TikTok Finds Section -->
+        <section id="tiktok" class="tab-content">
+            <h2>TikTok Finds</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="TikTok Product">
+                    <h3>Mini Projector</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250" alt="TikTok Product">
+                    <h3>Portable Blender</h3>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 RichuFinds. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">TikTok</a>
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="mailto:contact@richufinds.com">Contact</a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
