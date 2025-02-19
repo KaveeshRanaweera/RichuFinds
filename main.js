@@ -9,8 +9,3 @@ function openTab(tabName) {
     document.getElementById(tabName).classList.add('active');
     document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
 }
-
-// Dark Mode Toggle
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-}
