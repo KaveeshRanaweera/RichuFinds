@@ -13,16 +13,6 @@ function openTab(tabName) {
     document.getElementById(tabName).classList.add('active');
     document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
 }
-function openAliExpress() {
-    var appLink = "aliExpress://s.click.aliexpress.com/e/_oERwPu2";
-    var webLink = "https://s.click.aliexpress.com/e/_oERwPu2";
-
-    window.location.href = appLink;
-    
-    setTimeout(() => {
-        window.location.href = webLink;
-    }, 1500); // If the app doesn't open, redirect to the browser link
-}
 
 setInterval(function () {
     if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
