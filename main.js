@@ -14,12 +14,12 @@ function openTab(tabName) {
     document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
 }
 
-setInterval(function () {
-    if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
-        alert("Developer tools are not allowed!");
-        window.location.reload(); // or redirect to another page
-    }
-}, 1000);
+//setInterval(function () {
+// if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+  //      alert("Developer tools are not allowed!");
+   //     window.location.reload(); // or redirect to another page
+ //   }
+//}, 1000);
 
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 
