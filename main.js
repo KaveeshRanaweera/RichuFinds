@@ -24,6 +24,36 @@ function openAliExpress() {
     }, 1500); // If the app doesn't open, redirect to the browser link
 }
 
+setInterval(function () {
+    if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+        alert("Developer tools are not allowed!");
+        window.location.reload(); // or redirect to another page
+    }
+}, 1000);
+
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I") || (event.ctrlKey && event.key === "U")) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey && (event.key === "u" || event.key === "c" || event.key === "x" || event.key === "v")) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener("selectstart", function (event) {
+    event.preventDefault();
+});
+
+
 // Open AliExpress tab by default when page loads
 document.addEventListener("DOMContentLoaded", function() {
     openTab('aliexpress');
