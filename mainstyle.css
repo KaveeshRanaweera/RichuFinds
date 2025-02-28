@@ -197,28 +197,54 @@ footer {
         padding: 15px;
     }
 
+    /* Product Container - Two Columns */
     .product-container {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 15px;
+        justify-content: center;
     }
 
+    .product-card {
+        width: 100%;
+        padding: 15px; /* Slightly reduced padding */
+    }
+
+    /* Make the product title and description smaller */
+    .product-card h3 {
+        font-size: 12px; /* Smaller product title */
+    }
+
+    .product-card p {
+        font-size: 12px; /* Smaller description */
+        color: var(--text-dark);
+    }
+
+    /* Adjust Button Size */
+    .product-card a {
+        padding: 6px 10px; /* Smaller button */
+        font-size: 12px; /* Smaller text */
+    }
+
+    /* Tab Buttons */
     .tab-container {
         flex-direction: row;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
     }
 
     .tab-button {
-        width: auto;
-        padding: 10px 14px;
+        padding: 6px 10px; /* Smaller button */
+        font-size: 16px;
     }
 
+    /* Header Adjustments */
     header h1 {
-        font-size: 28px;
+        font-size: 26px; /* Smaller heading */
     }
 
     .profile-pic {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 }
