@@ -24,6 +24,7 @@ html, body {
     --background-light: #161B22;
     --text-light: #C9D1D9;
     --text-dark: #8B949E;
+    --text-red: #FF0000;
 }
 
 /* Main Container */
@@ -145,6 +146,13 @@ header h1 {
     color: var(--text-light);
 }
 
+.product-card h4 {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-red);
+}
+
 .product-card a {
     display: block;
     margin-top: 12px;
@@ -212,6 +220,10 @@ footer {
 
     /* Make the product title and description smaller */
     .product-card h3 {
+        font-size: 12px; /* Smaller product title */
+    }
+
+    .product-card h4 {
         font-size: 12px; /* Smaller product title */
     }
 
